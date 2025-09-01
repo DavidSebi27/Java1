@@ -30,7 +30,7 @@ public class Main
         for (int k = 0; k < students; k++)
         {
             totalScore += studentScores[k];
-            avgScore = totalScore /  students;
+            avgScore = totalScore / students;
             highestScore = Math.max(highestScore, studentScores[k]);
             if(highestScore == studentScores[k])
             {
