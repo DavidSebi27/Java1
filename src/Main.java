@@ -24,22 +24,18 @@ public class Main
 
         int totalScore = 0;
         int avgScore = 0;
+        int highestScore = 0;
+        String highestName = "";
 
         for (int k = 0; k < students; k++)
         {
             totalScore += studentScores[k];
             avgScore = totalScore /  students;
-        }
-
-        int highestScore = 0;
-        String highestName = "";
-        for  (int l = 0; l < students; l++)
-        {
-            highestScore = Math.max(highestScore, studentScores[l]);
-            if(highestScore == studentScores[l])
-                {
-                highestName = studentNames[l];
-                }
+            highestScore = Math.max(highestScore, studentScores[k]);
+            if(highestScore == studentScores[k])
+            {
+                highestName = studentNames[k];
+            }
         }
 
         System.out.printf("Average grade: %d", avgScore);
